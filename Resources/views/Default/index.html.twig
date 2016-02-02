@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h2> Hello utilisateur {{ name }} ! </h2>
+		<h2> Menu principal </h2>
+		<h3> Opérations simples </h3>
+		<li><a href="{{ path('sym16_simple_stock_produit',
+		{'multiplicande': '5', 'multiplicateur': '3'}) }}">
+		Calculer le produit de deux nombres </a> </li>
+		<li><a href="{{ path('sym16_simple_stock_racine',
+                {'valeur': '5', 'radical': '3'}) }}">
+                Des by de racine </a> </li>
+	petit test avec le prof {{prof}}
+	un autre {{lecture}}
+	</body>
+</html>
+

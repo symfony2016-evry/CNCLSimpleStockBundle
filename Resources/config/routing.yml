@@ -1,0 +1,16 @@
+sym16_simple_stock_iLike:
+    path:     /iLike/{verbe}
+    defaults: { _controller: SYM16SimpleStockBundle:CNCLPremierControleur:iLike }
+
+sym16_simple_stock_produit:
+    path:     /produit/{multiplicande}/{multiplicateur}
+    defaults: { _controller: SYM16SimpleStockBundle:CNCLPremierControleur:produit}
+
+sym16_simple_stock_homepage:
+    path:     /home/{name}
+    defaults: { _controller: SYM16SimpleStockBundle:Default:index}
+
+sym16_simple_stock_racine:
+    path:     /racine/{valeur}/{radical}
+    defaults: { _controller: SYM16SimpleStockBundle:CNCLPremierControleur:racine}
+

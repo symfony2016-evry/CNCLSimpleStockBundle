@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			table {
+				border-color: blue;
+			}
+			table th {
+				border-color: blue;
+				padding: 5px;
+			}
+			table td {
+				border-color: blue;
+				text-align: right;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1">
+		<tr> 
+			{% for Colnames in listColnames %}
+				<th> {{ Colnames }} </th>
+			{% endfor %}	
+		</tr>
+		<tr>
+			{% for Entities in listEntities %}
+			<tr> 
+                             {% for val in Entities%}
+			         <td> {{ val }} </td>
+			     {% endfor %}
+			     {% for key,paths in path %}
+				<td> 
+				{% if key  == 'mod' %} <a href="{{ path('sym16_simple_stock_modifier') }}"> Modifier </a>
+ 
+				{% else %} <a href="{{ path('sym16_simple_stock_supprimer') }}"> Supprimer </a>
+				{% endif %}
+				</td>
+			     {% endfor %}
+			</tr>
+			{% endfor %}
+		</tr>
+		</table>
+	</body>
+</html>
